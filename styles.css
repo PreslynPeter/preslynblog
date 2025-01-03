@@ -30,6 +30,27 @@ body {
     height: auto;
 }
 
+.navbar {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
 /* Navbar Container */
 .navbar {
     width: 100%; /* Full width */
@@ -48,7 +69,7 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
-    background: linear-gradient(90deg, #7a3969 0%, #e20e9f 100%);
+    background: linear-gradient(90deg, #1f0f1b 0%, #e20e9f 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
