@@ -26,8 +26,14 @@
                 <li class="navbar__item">
                     <a href="/tech.html" class="navbar__links">About</a>
                 </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">Articles</a>
+                
+                <li class="navbar__item navbar__dropdown">
+                    <a href="#" class="navbar__links dropdown-toggle">Articles</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/BigBanyanTree.html" class="dropdown-link">Banyan Tree</a></li>
+                        <li><a href="/ConserveNature.html" class="dropdown-link">Artificial to protect Nature</a></li>
+                        <li><a href="/ConserveNature.html" class="dropdown-link">Conserve Nature For our Future</a></li>
+                    </ul>
                 </li>
                 <li class="navbar__btn">
                     <a href="/" class="button">Sign Up</a>
@@ -38,6 +44,29 @@
     <div class="title-band">
         <h1>Preslyn's Poetry</h1>
     </div>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for poems..." />
+    </div>
+
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const poems = document.querySelectorAll('.poem-container');
+    
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase();
+    
+            poems.forEach(poem => {
+                const title = poem.getAttribute('data-title').toLowerCase();
+                const tags = poem.getAttribute('data-tags').toLowerCase();
+                if (title.includes(query) || tags.includes(query)) {
+                    poem.style.display = 'block';
+                } else {
+                    poem.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
     <main class="posts-container">
         <div class="post">
             <a href="post1.html">

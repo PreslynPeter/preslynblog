@@ -180,5 +180,84 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
 }
+/* Dropdown Styling */
+.navbar__dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.dropdown-link:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show Dropdown on Hover */
+.navbar__dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Adjust Dropdown for Mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown-link {
+        padding: 10px;
+    }
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#searchBar {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #007BFF;
+}
 
 
